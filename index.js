@@ -28,7 +28,7 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log(createMenuItem('pizza', 2, 'Lunch'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -47,7 +47,13 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function (costumer){
+    if (costumer === 'teacher' || costumer === 'student'){
+      return this.price - 4.5;
+    }else if (costumer === 'public'){
+      return this.price - 1.8;
+    }
+  }
 }
 
 
@@ -69,7 +75,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+console.log(reviews['Julius']);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -92,7 +98,7 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
+function addReview(array,){
   /*Your Code Here */
 }
 
@@ -108,7 +114,7 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+  `{$array[index].name} gave the restaurant a {$array[index].rating} star review, and their feedback was: {$array[i].feedback}`
 }
 
 
